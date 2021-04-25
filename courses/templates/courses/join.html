@@ -1,0 +1,43 @@
+{% extends 'courses/base.html' %}
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Course Hero Subscribe</h1>
+  <p class="lead">Become a software engineer,Data Scientist by taking our coursehero courses</p>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Monthly</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$20 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Access to 50+ Videos of Content</li>
+          <li>Enough Support</li>
+          <li>Build World Class Projects</li>
+          <li>Weekly One on One Mentorship</li>
+        </ul>
+        <a href="{% url 'checkout' %}?plan=monthly"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Yearly<small class="text-primary">  Save $20!</small></h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$200 <small class="text-muted">/ yr</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Access to 50+ Videos of Content</li>
+          <li>Enough Support</li>
+          <li>Build World Class Projects</li>
+          <li>Twice Weekly One on One Mentorship</li>
+        </ul>
+        <a href="{% url 'checkout' %}?plan=yearly"><button type="button" class="btn btn-lg btn-block btn-primary">Get started</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'courses/base.html' %}
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Course Hero</h1>
+  <p class="lead">Become a Software Engineer</p>
+  <a href="{% url 'join' %}"><button type="button" class="btn btn-lg btn-primary">Get Premium</button></a>
+</div>
+
+<div class="container">
+
+  <h3>Trending Courses</h3>
+          <li>Become a Frontend Developer</li>
+          <li>Become a Fullstack Developer</li>
+          <li>Become a BACKEND Developer</li>
+          <li>Become a Data Scientist</li>
+  <ul>
+    {% for plan in plans.all %}
+
+    <li><a href="{% url 'plan' plan.id %}">{{ plan.title }}</a></li>
+
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
